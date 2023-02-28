@@ -15,7 +15,7 @@ use App\Http\Controllers\ControladorAdmin;
 */
 
 Route::group (['middleware' => ['adb']],function () {
-    Route::get('/clientes',[ControladorAdmin::class, 'clientes']);
-    Route::get('/facturacion',[ControladorAdmin::class, 'facturacion']);
-    Route::get('/contabilidad',[ControladorAdmin::class, 'contabilidad']);
+    Route::get('/clientes',[ControladorAdmin::class, 'clientes']) -> name("clientesCambio");
+    Route::get('/facturacion',[ControladorAdmin::class, 'facturacion']) -> name("facturacionCambio");
+    Route::get('/contabilidad',[ControladorAdmin::class, 'contabilidad']) -> name("contabilidadCambio");
 });
